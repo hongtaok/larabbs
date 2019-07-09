@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "175a95f2fbb1cbc06f0c0d64cdb351b8",
+    "content-hash": "f38122a2e95abd30e806d347d3c878e5",
     "packages": [
         {
             "name": "caouecs/laravel-lang",
