@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
 use Auth;
+use Illuminate\Support\Facades\Log;
+use phpDocumentor\Reflection\DocBlock\Tags\Formatter;
 
 class TopicsController extends Controller
 {
@@ -20,7 +22,8 @@ class TopicsController extends Controller
 
 	public function index(Request $request, Topic $topic)
 	{
-		$topics = $topic->withOrder($request->order)->paginate(20);
+		$topics = $topic->withOrder($request->order)->paginate(1);
+
 		return view('topics.index', compact('topics'));
 	}
 
