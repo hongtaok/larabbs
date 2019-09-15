@@ -3,13 +3,14 @@
 namespace App\Http;
 
 use App\Http\Middleware\EnsureEmailIsVerified;
+use App\Http\Middleware\RecordLastActivedTime;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
 {
     /**
      * The application's global HTTP middleware stack.
-     *
+     * 全局中间件
      * These middleware are run during every request to your application.
      *
      * @var array
@@ -37,6 +38,9 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
 			\App\Http\Middleware\EnsureEmailIsVerified::class,
+
+            // 记录用户最后活跃时间
+            \App\Http\Middleware\RecordLastActivedTime::class
         ],
 
         'api' => [
